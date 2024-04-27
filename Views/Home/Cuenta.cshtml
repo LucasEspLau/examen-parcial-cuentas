@@ -2,16 +2,20 @@
     ViewData["Title"] = "Crear Cuenta";
 }
 <h1>@ViewData["Title"]</h1>
-
+                @if (TempData["Message"] != null)
+                {
+                    <div class="alert alert-success" >
+                        @TempData["Message"]
+                    </div>
+                }
             <div class="col-6">
                 <form asp-controller="Home" asp-action="Create" method="post">
                     <h3>Crea tu cuenta</h3>
                     <input type="text" placeholder="Nombre Completo"id="Titular" name="Titular" required>
                     <input type="email" placeholder="Correo electrónico" id="Email" name="Email" required>
-                    <input type="number" placeholder="SaldoInicial" id="SaldoInicial" name="SaldoInicial" required>
+                    <input type="number" placeholder="Saldo Inicial" id="SaldoInicial" name="SaldoInicial" required>
                     <input type="text" placeholder="Tipo de cuenta" id="TipoCuenta" name="TipoCuenta" required>
-   
-                    <input type="submit" value="Enviar Mensaje" class="btn">
+                    <input type="submit" value="Crear cuenta" class="btn">
                 </form>
 
             </div>
