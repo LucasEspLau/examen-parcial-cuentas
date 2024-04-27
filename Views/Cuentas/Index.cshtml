@@ -1,0 +1,33 @@
+@using examen_parcial_cuentas.Models.Entity;
+
+@model List<Cuenta>
+
+@{
+    ViewData["Title"] = "Lista de Cuentas";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Titular</th>
+            <th>Email</th>
+            <th>Tipo de Cuenta</th>
+            <th>Saldo Inicial</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cuenta in Model)
+        {
+            <tr>
+                <td>@cuenta.Id</td>
+                <td>@cuenta.Titular</td>
+                <td>@cuenta.Email</td>
+                <td>@cuenta.TipoCuenta</td>
+                <td>@cuenta.SaldoInicial</td>
+            </tr>
+        }
+    </tbody>
+</table>
