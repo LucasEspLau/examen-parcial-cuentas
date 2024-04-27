@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using examen_parcial_cuentas.Data;
+using examen_parcial_cuentas.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
